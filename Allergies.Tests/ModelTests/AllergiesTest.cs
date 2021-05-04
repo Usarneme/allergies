@@ -26,6 +26,18 @@ namespace Allergies.TestTools
     }
 
     [TestMethod]
+    public void Allergies_OneTwoNine_EggsCats()
+    {
+      Assert.AreEqual("eggs cats ", AllergiesCount.Allergies.DetermineAllergies(129));
+    }
+
+    [TestMethod]
+    public void Allergies_TwoFiveFive_AllAllergens()
+    {
+      Assert.AreEqual("eggs peanuts shellfish strawberries tomatoes chocolate pollen cats ", AllergiesCount.Allergies.DetermineAllergies(255));
+    }
+
+    [TestMethod]
     public void Allergies_Zero_NoAllergies()
     {
       Assert.AreEqual("No allergies", AllergiesCount.Allergies.DetermineAllergies(0));

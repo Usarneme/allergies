@@ -19,6 +19,11 @@ namespace AllergiesCount
       for (int index = binaryScore.Length-1; index >= 0; index--)
       {
         int indexInAllergensArray = binaryScore.Length - 1 - index;
+        if(allergiesScore == 0)
+        {
+          return "No allergies";
+        }
+
         if(binaryScore[index] == '1')
         {
           returnString += allergens[indexInAllergensArray] + " ";
