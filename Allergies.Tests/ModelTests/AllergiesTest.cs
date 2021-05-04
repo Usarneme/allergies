@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AllergiesCount;
 
 namespace Allergies.TestTools
 {
@@ -20,5 +19,10 @@ namespace Allergies.TestTools
       Assert.AreEqual("Not a valid allergy score", AllergiesCount.Allergies.DetermineAllergies(280));
     }
 
+    [TestMethod]
+    public void Allergies_One_Eggs()
+    {
+      Assert.AreEqual("eggs ", AllergiesCount.Allergies.DetermineAllergies(1));
+    }
   }
 }
