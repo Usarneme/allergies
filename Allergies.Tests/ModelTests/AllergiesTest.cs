@@ -24,5 +24,11 @@ namespace Allergies.TestTools
     {
       Assert.AreEqual("eggs ", AllergiesCount.Allergies.DetermineAllergies(1));
     }
+
+    [TestMethod]
+    public void Allergies_Zero_NoAllergies()
+    {
+      Assert.AreEqual("No allergies", AllergiesCount.Allergies.DetermineAllergies(0));
+    }
   }
 }
